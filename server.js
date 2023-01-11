@@ -11,6 +11,10 @@ function start() {
     }, delay)    
 }
 
+app.get("/", (req, res) => {
+    res.end()
+})
+
 app.listen(PORT, () => {
     console.log(`Server start no port ${PORT}`);
     start()
