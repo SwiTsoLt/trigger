@@ -5,8 +5,8 @@ const app = express()
 const PORT = process.env.PORT || 5000
 const delay = 600000
 
-async function start() {
-    setTimeout(() => {
+function start() {
+    setTimeout(async () => {
        await axios.get("https://vsekinopoisk.onrender.com/")
        start() 
     }, delay)
