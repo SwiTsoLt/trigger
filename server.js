@@ -7,7 +7,8 @@ const delay = 600000
 
 function start() {
     setTimeout(async () => {
-       await axios.get("https://vsekinopoisk.onrender.com/")
+       const response = await axios.get("https://vsekinopoisk.onrender.com/")
+       console.log(response.status)
        start() 
     }, delay)
         
