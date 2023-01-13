@@ -7,10 +7,10 @@ const delay = 600000
 
 function start() {
     setTimeout(async () => {
-        const response = await axios.get("https://vsekinopoisk.onrender.com/")
-        console.log("r1: ", response.status)
-        const response2 = await axios.get("https://bushkabybot.onrender.com")
-        console.log("r2: ", response2.status)
+        const response = await axios.get("https://vsekinopoisk.onrender.com/").then(r => r).catch(console.log)
+        console.log("r1: ", response?.status)
+        const response2 = await axios.get("https://bushkabybot.onrender.com").then(r => r).catch(console.log)
+        console.log("r2: ", response2?.status)
         start()
     }, delay)   
 }
